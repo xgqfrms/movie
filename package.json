@@ -1,0 +1,34 @@
+{
+  "name": "movie-search-web-app",
+  "version": "1.0.0",
+  "description": "a react movie search web app",
+  "author": "xgqfrms",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "performance",
+    "analytics"
+  ],
+  "files": [
+    "build/index.min.js",
+    ".editorconfig",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xgqfrms/movie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xgqfrms/movie/issues"
+  },
+  "homepage": "https://github.com/xgqfrms/movie#readme"
+}
