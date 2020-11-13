@@ -4,6 +4,8 @@ import MovieCard from "./MovieCard";
 import CardList from "./CardList";
 import SearchForm from "./SearchForm";
 
+import "./index.css";
+
 // options
 const apiV3 = `https://api.themoviedb.org/3/search/movie`;
 const apiKey = `5dcf7f28a88be0edc01bbbde06f024ab`;
@@ -25,6 +27,16 @@ const SearchMovie = () => {
     e.preventDefault();
     try {
       const url = `${apiV3}?api_key=${apiKey}&language=${lang}&query=${query}&page=${page}&include_adult=${adult}`;
+      setTimeout(() => {
+        const results = [{
+          title: "movie.title",
+          poster_path: "movie.poster_path",
+          release_date: "movie.release_date",
+          vote_average: "movie.vote_average",
+          overview: "movie.overview",
+        }];
+        setMovies(results);
+      }, 3000);
       const res = await fetch(url);
       const data = await res.json();
       setMovies(data.results);
