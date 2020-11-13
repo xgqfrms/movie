@@ -37,21 +37,34 @@ const SearchMovie = () => {
   return (
     <>
       {/* <form className="form" action="./api/path" method="get"> */}
-      <form className="form" onSubmit={search}>
+      {/* <form className="form" onSubmit={search}>
         <label className="label" htmlFor="query">Movie Name</label>
         <input className="input" type="text" name="query"
           placeholder="i.e. Jurassic Park"
           value={query} onChange={(e) => setQuery(e.target.value)}
         />
         <button className="button" type="submit">Search</button>
-      </form>
-      {/* SearchForm */}
-      {/* <CardList movie={movie} /> */}
-      <div className="card-list">
+      </form> */}
+      <SearchForm
+        datas={{
+          query,
+        }}
+        methods={{
+          setQuery,
+          search,
+        }}
+      />
+      {/* <SearchForm
+        query={query}
+        setQuery={setQuery}
+        search={search}
+      /> */}
+      <CardList movies={movies} />
+      {/* <div className="card-list">
         {movies.filter(movie => movie.poster_path).map(movie => (
           <MovieCard movie={movie} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 }
